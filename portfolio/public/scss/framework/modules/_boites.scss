@@ -1,0 +1,79 @@
+/*
+  ./scss/framework/modules/_boites.scss
+  Module des boites
+  ------------------------------------------------------------------------------
+ */
+
+/*----- TYPES DE BOITES -----*/
+
+  .boite-fixe {
+    width: calc(100% - 1rem);
+    max-width: $largeurBoiteFixe;
+    margin: auto;
+  }
+  .boite-fixe-resp {
+    width: calc(100% - 1rem);
+    max-width: $largeurBoiteFixe-xs;
+    margin: auto;
+    /*Pour les écrans small (à partir de 480px)*/
+    @media only screen and (min-width: 480px) {
+        max-width: $largeurBoiteFixe-s;
+    }
+    /*Pour les écrans medium (à partir de 768px)*/
+    @media only screen and (min-width: 768px) {
+        max-width: $largeurBoiteFixe-m;
+    }
+    /*Pour les écrans larges (à partir de 992px)*/
+    @media only screen and (min-width: 992px) {
+        max-width: $largeurBoiteFixe-l;
+    }
+    /*Pour les écrans xlarges (à partir de 1200px)*/
+    @media only screen and (min-width: 1200px) {
+        max-width: $largeurBoiteFixe-xl;
+    }
+  }
+
+  .boite-marge-nulle {
+    margin: 0;
+  }
+
+/*----- BOITES AVEC BORDURE -----*/
+
+  .boite-bords {
+    padding: $paddingBoite;
+    border: $couleurBordsBoite $tailleBordsBoite solid;
+  }
+
+/*----- BOITES DE COULEURS -----*/
+
+  .boite-couleur1 {
+    background : $couleur1;
+    padding: $paddingBoiteCouleur;
+    color: $couleurTextBoiteCouleur1;
+  }
+  .boite-couleur2 {
+    background : $couleur2;
+    padding: $paddingBoiteCouleur;
+    color: $couleurTextBoiteCouleur2;
+  }
+  .boite-couleurNeutre {
+    background : $couleurNeutre;
+    padding: $paddingBoiteCouleur;
+    color: #fff;
+  }
+
+/*----- BOITES FLOTTANTES -----*/
+
+  .boite-flottante-gauche {
+    float: left;
+    margin: 0 $paddingBoiteFlottante $paddingBoiteFlottante 0;
+  }
+  .boite-flottante-droite {
+    float: right;
+    margin: 0 0 $paddingBoiteFlottante $paddingBoiteFlottante;
+  }
+  .boite-clearfix:after {
+    content:'';
+    display: block;
+    clear: both;
+  }

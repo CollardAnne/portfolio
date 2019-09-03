@@ -1,0 +1,132 @@
+ /*
+   .scss/framework/_variables.scss
+   Variables du framework
+   ------------------------------------------------------------------------------
+  */
+
+
+ /*----- POLICES -----*/
+
+   $policePrincipale: 'Raleway', sans-serif;
+   $policeSecondaire: 'Montserrat', sans-serif;
+
+
+/*----- COULEURS -----*/
+
+  $couleur1: 	#0B486B;
+  $couleur1Claire: lighten($couleur1, 50%);
+  $couleur1Foncee: darken($couleur1, 10%);
+
+  $couleur2: #3B8686;
+  $couleur2Claire: lighten($couleur2, 20%);
+  $couleur2Foncee: darken($couleur2, 10%);
+
+  $couleurNeutre: #000;
+  $couleurNeutre10: lighten($couleurNeutre, 10%);
+  $couleurNeutre20: lighten($couleurNeutre, 20%);
+  $couleurNeutre30: lighten($couleurNeutre, 30%);
+  $couleurNeutre40: lighten($couleurNeutre, 40%);
+  $couleurNeutre50: lighten($couleurNeutre, 50%);
+  $couleurNeutre60: lighten($couleurNeutre, 60%);
+  $couleurNeutre70: lighten($couleurNeutre, 70%);
+  $couleurNeutre80: lighten($couleurNeutre, 80%);
+  $couleurNeutre90: lighten($couleurNeutre, 90%);
+  $couleurNeutre100: lighten($couleurNeutre, 100%);
+
+/*----- DIMENSIONS DES CONTENUS -----*/
+
+  $taille-xs: .8rem;
+  $taille-s: 1rem;
+  $taille-m: 1.3rem;
+  $taille-l: 2.5rem;
+  $taille-xl: 3.5rem;
+  $taille-xxl: 4.5rem;
+
+
+/*----- MENU HORIZONTAL -----*/
+
+  $menuHorizontalPadding: .5rem;
+  $menuHorizontalCouleurOff: $couleur2;
+  $menuHorizontalCouleurTexteOff: $couleurNeutre;
+  $menuHorizontalCouleurOn: $couleur2;
+  $menuHorizontalCouleurTexteOn: $couleur1;
+
+
+/*----- MENU LATERAL -----*/
+
+  $menuLateralCouleur: $couleur1Claire;
+
+/*----- MENU HAMBURGER -----*/
+
+  $menuHamburgerCouleur: $couleurNeutre;
+  $menuHamburgerActiveCouleur: $couleurNeutre100;
+  $menuHamburgerLigneLargeur: 45px;
+  $menuHamburgerLigneHauteur: 2px;
+
+/*----- MENU VERTICAL -----*/
+
+  $menuVerticalCouleur: $couleur1;
+  $menuVerticalPadding: .5rem;
+  $menuVerticalCouleurBord: #CC5836;
+  $menuVerticalCouleurTexteOff: $couleur2;
+  $menuVerticalCouleurTexteOn: $couleur2Claire;
+
+/*----- MENU COVER -----*/
+
+  $menuCoverCouleur: $couleur1;
+  $menuCoverPadding: .5rem;
+  $menuCoverCouleurTexteOff: $couleurNeutre100;
+  $menuCoverCouleurTexteOn: $couleur1Claire;
+
+/*----- MENU - PAGINATION -----*/
+
+  $paginationAlignement: center;
+  $paginationDimension: 2rem;
+  $paginationCouleurOff: #fff;
+  $paginationCouleurTexteOff: $couleurNeutre;
+  $paginationCouleurBordsOff: $couleurNeutre;
+  $paginationCouleurOn: $couleur1;
+  $paginationCouleurTexteOn: #fff;
+  $paginationCouleurBordsOn: $couleur1;
+
+
+/*----- BOITES -----*/
+
+  $largeurBoiteFixe: 900px;
+
+  $largeurBoiteFixe-xs: 400px;
+  $largeurBoiteFixe-s: 700px;
+  $largeurBoiteFixe-m: 900px;
+  $largeurBoiteFixe-l: 1200px;
+  $largeurBoiteFixe-xl: 1300px;
+
+  $paddingBoite: .5rem 0;
+  $paddingBoiteCouleur: .5rem 0;
+  $couleurTextBoiteCouleur1: $couleur2Claire;
+  $couleurTextBoiteCouleur2: $couleurNeutre;
+  $tailleBordsBoite: 1px;
+  $couleurBordsBoite : #666;
+  $paddingBoiteFlottante: 1.5rem;
+
+
+/*----- GRILLES -----*/
+
+  $gouttiereGrille: 1rem;
+  $nbreColonnesGrille: 12;
+
+
+/*----- SLIDERS -----*/
+
+  $sliderBordCouleur : #FFF;
+  $sliderBordDimension : 0;
+
+
+/*----- FORMULAIRES -----*/
+
+  $formulaireLargeurChampsText : 12rem;
+  $formulaireCouleurTexteInputText: $couleurNeutre;
+  $formulaireCouleurInputText: $couleur2;
+  $formulaireCouleurTexteInputSubmitOff: $couleur2Claire;
+  $formulaireCouleurInputSubmitOff: $couleurNeutre;
+  $formulaireCouleurTexteInputSubmitOn: $couleurNeutre;
+  $formulaireCouleurInputSubmitOn: $couleur2Claire;

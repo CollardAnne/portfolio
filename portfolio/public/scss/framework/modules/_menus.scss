@@ -1,0 +1,194 @@
+/*
+  ./scss/framework/modules/_menus.scss
+  Module des menus
+  ------------------------------------------------------------------------------
+ */
+
+ /*----- TYPES DE MENU -----*/
+
+ /*-- Menu horizontal --*/
+
+  .menu-horizontal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-horizontal > ul > li {
+    display: inline-block;
+  }
+  .menu-horizontal a {
+    background: $menuHorizontalCouleurOff;
+    padding: $menuHorizontalPadding;
+    color: $menuHorizontalCouleurTexteOff;
+    text-decoration: none;
+  }
+  .menu-horizontal a:hover,
+  .menu-horizontal li.actif a,
+  .menu-horizontal a.actif {
+    background: $menuHorizontalCouleurOn;
+    color: $menuHorizontalCouleurTexteOn;
+  }
+
+/*-- Menu latéral --*/
+
+   .menu-lateral {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: block;
+      width: 40px;
+      height: 36px;
+      cursor: pointer;
+      z-index: 999;
+   }
+   .menu-lateral > div {
+     display: block;
+     position: absolute;
+     width: 40px;
+     height: 8px;
+     left: 0;
+     background: $menuLateralCouleur;
+   }
+   .menu-lateral .top {
+     top: 0;
+   }
+   .menu-lateral .center {
+     top: 14px;
+   }
+   .menu-lateral .bottom {
+     top: 28px;
+   }
+
+/*-- Menu menu-vertical --*/
+
+   .menu-vertical{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: 998;
+   }
+  .menu-vertical ul {
+    background: $menuVerticalCouleur;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  .menu-vertical > ul > li {
+    display: block;
+    padding: $menuVerticalPadding;
+    border-bottom: $menuVerticalCouleurBord 1px solid;
+    text-align: center;
+  }
+  .menu-vertical a {
+    color: $menuVerticalCouleurTexteOff;
+    text-decoration: none;
+  }
+  .menu-vertical a:hover,
+  .menu-vertical li.actif a,
+  .menu-vertical a.actif {
+    color: $menuVerticalCouleurTexteOn;
+  }
+
+
+/*-- Menu pagination --*/
+
+  .menu-pagination {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: $paginationAlignement;
+    a {
+      display: block;
+      border-top: $paginationCouleurBordsOff 1px solid;
+      border-bottom: $paginationCouleurBordsOff 1px solid;
+      border-right: $paginationCouleurBordsOff 1px solid;
+      width: $paginationDimension;
+      line-height: $paginationDimension;
+      text-align: center;
+      background: $paginationCouleurOff;
+      color: $paginationCouleurTexteOff;
+    }
+    li:first-child a {
+      border-left: $paginationCouleurBordsOff 1px solid;
+    }
+    li.actif a,
+    li:first-child.actif a,
+    li:first-child a:hover,
+    a:hover {
+      background: $paginationCouleurOn;
+      border-color: $paginationCouleurBordsOn;
+      color: $paginationCouleurTexteOn;
+    }
+  }
+
+  /*-- Menu hamburger --*/
+
+     .menu-hamburger {
+       position: relative;
+       display: block;
+       width: 45px;
+       height: 45px;
+       cursor: pointer;
+       z-index: 999;
+     }
+     .menu-hamburger > div {
+       display: block;
+       position: relative;
+       width: $menuHamburgerLigneLargeur;
+       height: $menuHamburgerLigneHauteur;
+       background: $menuHamburgerCouleur;
+     }
+     .menu-hamburger.active > div {
+       background: $menuHamburgerActiveCouleur;
+     }
+     .menu-hamburger .top {
+       top: 0;
+     }
+     .menu-hamburger .center {
+       top: 12px;
+     }
+     .menu-hamburger .bottom {
+       top: 24px;
+     }
+
+   /*-- Menu cover --*/
+
+      .menu-cover{
+       background: $menuCoverCouleur;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       display: block;
+       z-index: 998;
+      }
+     .menu-cover ul {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translateX(-50%) translateY(-50%);
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       text-transform: uppercase;
+       text-align: center;
+     }
+     .menu-cover > ul > li {
+       display: block;
+       padding: $menuCoverPadding;
+       text-align: center;
+     }
+     .menu-cover a {
+       color: $menuCoverCouleurTexteOff;
+       text-decoration: none;
+       font-size: 2rem;
+     }
+     .menu-cover a:hover,
+     .menu-cover li.actif a,
+     .menu-cover a.actif {
+       color: $menuCoverCouleurTexteOn;
+     }

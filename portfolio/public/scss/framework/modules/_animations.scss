@@ -1,0 +1,118 @@
+/*
+  ./scss/framework/modules/_animations.scss
+  Module des animations
+  ------------------------------------------------------------------------------
+ */
+
+/*----- TYPES ANIMATIONS -----*/
+
+	/*-- Envol fusée --*/
+
+	.animationFusee:hover {
+		animation: animationFusee 1000ms;
+		opacity:0;
+		transition: opacity 0.4s ease 0.2s;
+	}
+	    @keyframes animationFusee {
+	      0% {
+	        transform:translateX(2rem)
+	                  translateY(3rem)
+	                  translate(-50%, -50%);
+			}
+	      100% {
+	        transform:translateX(16rem)
+	                  translateY(-9.5rem)
+	                  translate(-50%, -50%);
+	      }
+	    }
+
+	/*-- Shake --*/
+
+	.animationShake:hover {
+		animation: animationShake 100ms infinite;
+	}
+	    @keyframes animationShake {
+	      0% {
+	        transform:translateX(40px)
+	                  translateY(40px)
+	                  translate(-50%, -50%);
+			}
+	      100% {
+	        transform:translateX(50px)
+	                  translateY(40px)
+	                  translate(-50%, -50%);
+				}
+	    }
+
+	/*-- Boite sur image au survol --*/
+
+	.animation-boite-opacite a {
+			position: relative;
+			display: block;
+	}
+	.animation-boite-opacite .ecran {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 94%;
+			background: #000 url('../media/zoom.png') center center no-repeat;
+			z-index: 99;
+			opacity: 0;
+			transition: opacity .5s ease;
+		}
+	.animation-boite-opacite .ecran:hover {
+			opacity: 0.5;
+	}
+
+
+
+	/*-- Animation du menu lateral au clique --*/
+
+	.animation-menu-lateral .top, .animation-menu-lateral .center, .animation-menu-lateral .bottom {
+					transition: all 0.35s;
+	}
+	.animation-menu-lateral.active .top {
+					top: 14px;
+					transform: rotate(45deg);
+					transition: all 0.5s ;
+	}
+	.animation-menu-lateral.active .center {
+					transform: rotate(-45deg);
+					transition: all 0.5s ;
+	}
+	.animation-menu-lateral.active .bottom {
+					opacity: 0;
+					transition: opacity 0.35s;
+	}
+
+	/* --- effet typewriter : curseur --- */
+	.curseur {
+		border-right: .05em solid;
+		animation: caret 1s steps(1) infinite;
+	}
+	@keyframes caret {
+		50% {
+			border-color: transparent;
+		}
+	}
+
+	/*-- Animation du menu hamburger au clique --*/
+
+	.anim-menu-hamburger .top, .anim-menu-hamburger .center, .anim-menu-hamburger .bottom {
+					transition: all 0.35s;
+	}
+	.anim-menu-hamburger.active .top {
+					top: 14px;
+					transform: rotate(45deg);
+					transition: all 0.5s ;
+	}
+	.anim-menu-hamburger.active .center {
+					transform: rotate(-45deg);
+					transition: all 0.5s ;
+	}
+	.anim-menu-hamburger.active .bottom {
+					opacity: 0;
+					transition: opacity 0.35s;
+	}

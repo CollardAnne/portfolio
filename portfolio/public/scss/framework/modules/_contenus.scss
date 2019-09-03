@@ -1,0 +1,212 @@
+/*
+  ./scss/framework/modules/_contenus.scss
+  Module des contenus
+  ------------------------------------------------------------------------------
+ */
+
+ /*----- ALIGNEMENT DES CONTENUS -----*/
+
+ /*-- Contenu centré --*/
+ .xs-contenu-centre {
+   text-align: center;
+ }
+ /*-- Contenu à gauche --*/
+ .xs-contenu-gauche {
+   text-align: left;
+ }
+ /*-- Contenu à droite --*/
+ .xs-contenu-droite {
+   text-align: right;
+ }
+ /*-- Contenu justifié --*/
+ .xs-contenu-justifie {
+   text-align: justify;
+ }
+
+   /*Pour les écrans small (à partir de 480px)*/
+   @media only screen and (min-width: 480px) {
+     .s-contenu-centre {
+       text-align: center;
+     }
+     .s-contenu-gauche {
+       text-align: left;
+     }
+     .s-contenu-droite {
+       text-align: right;
+     }
+     .s-contenu-justifie {
+       text-align: justify;
+     }
+   }
+   /*Pour les écrans medium (à partir de 768px)*/
+   @media only screen and (min-width: 768px) {
+     .m-contenu-centre {
+       text-align: center;
+     }
+     .m-contenu-gauche {
+       text-align: left;
+     }
+     .m-contenu-droite {
+       text-align: right;
+     }
+     .m-contenu-justifie {
+       text-align: justify;
+     }
+   }
+   /*Pour les écrans larges (à partir de 992px)*/
+   @media only screen and (min-width: 992px) {
+     .l-contenu-centre {
+       text-align: center;
+     }
+     .l-contenu-gauche {
+       text-align: left;
+     }
+     .l-contenu-droite {
+       text-align: right;
+     }
+     .l-contenu-justifie {
+       text-align: justify;
+     }
+   }
+   /*Pour les écrans xlarges (à partir de 1200px)*/
+   @media only screen and (min-width: 1200px) {
+     .xl-contenu-centre {
+       text-align: center;
+     }
+     .xl-contenu-gauche {
+       text-align: left;
+     }
+     .xl-contenu-droite {
+       text-align: right;
+     }
+     .xl-contenu-justifie {
+       text-align: justify;
+     }
+   }
+
+ /*----- TAILLES DES CONTENUS -----*/
+
+ .xs-contenu-xs {
+   font-size: $taille-xs;
+ }
+ .xs-contenu-s {
+   font-size: $taille-s;
+ }
+ .xs-contenu-m {
+   font-size: $taille-m;
+ }
+ .xs-contenu-l {
+   font-size: $taille-l;
+ }
+ .xs-contenu-xl {
+   font-size: $taille-xl;
+ }
+ .xs-contenu-xxl {
+   font-size: $taille-xxl;
+ }
+
+   /*Pour les écrans small (à partir de 480px)*/
+   @media only screen and (min-width: 480px) {
+     .s-contenu-xs {
+       font-size: $taille-xs;
+     }
+     .s-contenu-s {
+       font-size: $taille-s;
+     }
+     .s-contenu-m {
+       font-size: $taille-m;
+     }
+     .s-contenu-l {
+       font-size: $taille-l;
+     }
+     .s-contenu-xl {
+       font-size: $taille-xl;
+     }
+     .s-contenu-xxl {
+       font-size: $taille-xxl;
+     }
+   }
+   /*Pour les écrans medium (à partir de 768px)*/
+   @media only screen and (min-width: 768px) {
+     .m-contenu-xs {
+       font-size: $taille-xs;
+     }
+     .m-contenu-s {
+       font-size: $taille-s;
+     }
+     .m-contenu-m {
+       font-size: $taille-m;
+     }
+     .m-contenu-l {
+       font-size: $taille-l;
+     }
+     .m-contenu-xl {
+       font-size: $taille-xl;
+     }
+     .m-contenu-xxl {
+       font-size: $taille-xxl;
+     }
+   }
+   /*Pour les écrans larges (à partir de 992px)*/
+   @media only screen and (min-width: 992px) {
+     .l-contenu-xs {
+       font-size: $taille-xs;
+     }
+     .l-contenu-s {
+       font-size: $taille-s;
+     }
+     .l-contenu-m {
+       font-size: $taille-m;
+     }
+     .l-contenu-l {
+       font-size: $taille-l;
+     }
+     .l-contenu-xl {
+       font-size: $taille-xl;
+     }
+     .l-contenu-xxl {
+       font-size: $taille-xxl;
+     }
+   }
+   /*Pour les écrans xlarges (à partir de 1200px)*/
+   @media only screen and (min-width: 1200px) {
+     .xl-contenu-xs {
+       font-size: $taille-xs;
+     }
+     .xl-contenu-s {
+       font-size: $taille-s;
+     }
+     .xl-contenu-m {
+       font-size: $taille-m;
+     }
+     .xl-contenu-l {
+       font-size: $taille-l;
+     }
+     .xl-contenu-xl {
+       font-size: $taille-xl;
+     }
+     .xl-contenu-xxl {
+       font-size: $taille-xxl;
+     }
+   }
+
+ /*----- AFFICHAGES DES CONTENUS -----*/
+
+ .contenu-inline > * {
+   display: inline-block;
+ }
+
+ /*----- EPAISSEURS DES CONTENUS -----*/
+
+ .contenu-fin {
+   font-weight: lighter;
+ }
+ .contenu-normal {
+   font-weight: normal;
+ }
+ .contenu-gras {
+   font-weight: bold;
+ }
+ .contenu-gras2 {
+   font-weight: bolder;
+ }

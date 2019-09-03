@@ -1,0 +1,45 @@
+/*
+  ./scss/framework/modules/_mixins.scss
+  Module des mixins
+  ------------------------------------------------------------------------------
+ */
+
+@mixin ombre {
+	-webkit-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+	-o-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+	-ms-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+}
+
+@mixin rotationGauche {
+	-webkit-transform: rotate(-0.5deg);
+	-moz-transform: rotate(-0.5deg);
+	-o-transform: rotate(-0.5deg);
+	-ms-transform: rotate(-0.5deg);
+	transform: rotate(-0.5deg);
+}
+
+@mixin rotationDroite{
+	-webkit-transform: rotate(0.5deg);
+	-moz-transform: rotate(0.5deg);
+	-o-transform: rotate(0.5deg);
+	-ms-transform: rotate(0.5deg);
+	transform: rotate(0.5deg);
+}
+
+@mixin transitionFondu {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	-ms-transition: all .3s;
+	transition: all .3s;
+}
+
+@mixin filtreContraste {
+	-webkit-filter: contrast(130%);
+	-moz-filter: contrast(130%);
+	-o-filter: contrast(130%);
+	-ms-filter: contrast(130%);
+	filter: contrast(130%);
+}

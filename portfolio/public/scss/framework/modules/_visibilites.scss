@@ -1,0 +1,78 @@
+/*
+  ./scss/framework/modules/_visibilites.scss
+  Module des visibilités
+  ------------------------------------------------------------------------------
+ */
+
+ /*----- VISIBILITES CACHEES -----*/
+
+  .xs-cache {
+    display: none;
+  }
+  /*Pour les écrans small (à partir de 480px)*/
+  @media only screen and (min-width: 480px) {
+    .s-cache {
+      display: none;
+    }
+  }
+  /*Pour les écrans medium (à partir de 768px)*/
+  @media only screen and (min-width: 768px) {
+    .m-cache {
+      display: none;
+    }
+  }
+  /*Pour les écrans larges (à partir de 992px)*/
+  @media only screen and (min-width: 992px) {
+    .l-cache {
+      display: none;
+    }
+  }
+  /*Pour les écrans xlarges (à partir de 1200px)*/
+  @media only screen and (min-width: 1200px) {
+    .xl-cache {
+      display: none;
+    }
+  }
+
+ /*----- VISIBILITES VISIBLES -----*/
+
+ .xs-visible {
+   display: block;
+ }
+  /*Pour les écrans small (à partir de 480px)*/
+  .s-visible {
+    display: none;
+  }
+  @media only screen and (min-width: 480px) {
+    .s-visible {
+      display: block;
+    }
+  }
+  /*Pour les écrans medium (à partir de 768px)*/
+  .m-visible {
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    .m-visible {
+      display: block;
+    }
+  }
+  /*Pour les écrans larges (à partir de 992px)*/
+  .l-visible {
+    display: none;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .l-visible {
+      display: block;
+    }
+  }
+  /*Pour les écrans xlarges (à partir de 1200px)*/
+  .xl-visible {
+    display: none;
+  }
+  @media only screen and (min-width: 1200px) {
+    .xl-visible {
+      display: block;
+    }
+  }

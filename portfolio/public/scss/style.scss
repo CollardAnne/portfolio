@@ -1,0 +1,145 @@
+/*
+  ./scss/style.scss
+  Style - Fichier de surchage
+  ------------------------------------------------------------------------------
+ */
+
+@import 'framework/variables';
+@import 'framework/modules/mixins';
+@import 'framework/modules/animations';
+
+/* ----------------------------------------------------
+ SPECIFICATIONS GENERALES (valeurs par défaut)
+ ----------------------------------------------------
+*/
+
+  body {
+    color: $couleurNeutre;
+    font-family: $policePrincipale;
+  }
+
+  header {
+    padding-top: 2rem;
+  }
+
+  main {
+    padding-top: 4rem;
+  }
+
+  footer {
+
+  }
+
+/* ----------------------------------------------------
+   OBJETS PARTICULIERS
+   ----------------------------------------------------
+*/
+
+/*----- HEADER ----*/
+
+#nom {
+  h1, h2 {
+    font-weight: lighter;
+  }
+}
+
+#menu {
+  padding-top: .5rem;
+
+}
+
+/*----- MAIN ----*/
+
+  .imgHover {
+    width: auto;
+    height: auto;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  .imgHover:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  #detailProjet {
+    padding-left: 2rem;
+    .nomProjet {
+      font-family: $policeSecondaire;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 5rem 0 .5rem 0;
+    }
+    .nombreProjet {
+      color: $couleurNeutre60;
+    }
+    .description {
+      padding-top: 1rem;
+    }
+    .bouton {
+      border: 1px solid $couleurNeutre60;
+      margin-top: 2rem;
+      padding: .5rem .2rem;
+      width: 150px;
+      text-align: center;
+      text-transform: uppercase;
+      a {
+        color: $couleurNeutre60;
+        text-decoration: none;
+      }
+    }
+    .bouton:hover {
+      border: 1px solid $couleurNeutre;
+      a {
+        color: $couleurNeutre;
+      }
+    }
+  }
+
+/*----- FOOTER ----*/
+
+  #slideController {
+    position: relative;
+    top: 0;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      text-align: center;
+      margin: 0 .1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid $couleurNeutre80;
+      width: 50px;
+    }
+    ul li:first-of-type,
+    ul li:last-of-type {
+      display: none;
+    }
+    li:hover {
+      border-bottom: 2px solid $couleur1;
+      a {
+        opacity: 1;
+      }
+    }
+    li.active:hover {
+      border-bottom: 1px solid $couleurNeutre;
+    }
+    a {
+      display: block;
+      opacity: 0;
+      -webkit-transition: opacity .5s ease-in-out;
+      -moz-transition: opacity .5s ease-in-out;
+      -ms-transition: opacity .5s ease-in-out;
+      -o-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out;
+      font-weight: bold;
+      text-decoration: none;
+      color: $couleurNeutre;
+    }
+    .active {
+      border-bottom: 1px solid $couleurNeutre;
+    }
+  }

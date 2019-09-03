@@ -1,0 +1,33 @@
+/*
+  ./scss/framework/modules/_formulaires.scss
+  Module des formulaire
+  ------------------------------------------------------------------------------
+ */
+
+/*----- TYPES DE FORMULAIRES -----*/
+
+/*--- recherche ---*/
+
+.search {
+  input {
+    border-radius: 5px;
+    border: 0;
+    margin-left: .1rem;
+  }
+  input[type=text]{
+    padding: .5rem .4rem .4rem;
+    color : $formulaireCouleurTexteInputText;
+    background: $formulaireCouleurInputText;
+    width: $formulaireLargeurChampsText;
+  }
+  input[type=submit]{
+    padding: .5rem 1rem .4rem;
+    color: $formulaireCouleurTexteInputSubmitOff;
+    background: $formulaireCouleurInputSubmitOff;
+    cursor:pointer;
+    &:hover {
+      color: $formulaireCouleurTexteInputSubmitOn;
+      background: $formulaireCouleurInputSubmitOn;
+    }
+  }
+}

@@ -11,11 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
+
+// Routes par défaut
+//
+Route::get('/', 'ProjetsController@index')->name('homepage');
+
+// Routes des projets
+//
+// Route::get('projets/{id}', 'ProjetsController@show')->name('projets');
+
+
+// Routes : Voyager
+//
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

@@ -1,0 +1,21 @@
+/*
+  ./scss/framework/modules/_boutons.scss
+  Module des Boutons
+  ------------------------------------------------------------------------------
+ */
+
+ .bouton-couleur1 {
+   background-image:linear-gradient(lighten($couleur1, 10%), $couleur1);
+   box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5),
+               0 -1px 0 rgba( 255, 255, 255, 0.4);
+   padding: 0.5rem;
+   color: $couleur2;
+   border-radius: 5px;
+   text-decoration: none;
+   @include transitionFondu;
+    &:hover {
+      background: $couleur2;
+      border: $couleurNeutre 1px solid;
+      color : $couleurNeutre;
+    }
+ }

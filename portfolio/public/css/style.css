@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/*
+  ./scss/style.scss
+  Style - Fichier de surchage
+  ------------------------------------------------------------------------------
+ */
+/*
+   .scss/framework/_variables.scss
+   Variables du framework
+   ------------------------------------------------------------------------------
+  */
+/*----- POLICES -----*/
+/*----- COULEURS -----*/
+/*----- DIMENSIONS DES CONTENUS -----*/
+/*----- MENU HORIZONTAL -----*/
+/*----- MENU LATERAL -----*/
+/*----- MENU HAMBURGER -----*/
+/*----- MENU VERTICAL -----*/
+/*----- MENU COVER -----*/
+/*----- MENU - PAGINATION -----*/
+/*----- BOITES -----*/
+/*----- GRILLES -----*/
+/*----- SLIDERS -----*/
+/*----- FORMULAIRES -----*/
+/*
+  ./scss/framework/modules/_mixins.scss
+  Module des mixins
+  ------------------------------------------------------------------------------
+ */
+/*
+  ./scss/framework/modules/_animations.scss
+  Module des animations
+  ------------------------------------------------------------------------------
+ */
+/*----- TYPES ANIMATIONS -----*/
+/*-- Envol fusée --*/
+.animationFusee:hover {
+  animation: animationFusee 1000ms;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.2s;
+}
+
+@keyframes animationFusee {
+  0% {
+    transform: translateX(2rem) translateY(3rem) translate(-50%, -50%);
+  }
+  100% {
+    transform: translateX(16rem) translateY(-9.5rem) translate(-50%, -50%);
+  }
+}
+
+/*-- Shake --*/
+.animationShake:hover {
+  animation: animationShake 100ms infinite;
+}
+
+@keyframes animationShake {
+  0% {
+    transform: translateX(40px) translateY(40px) translate(-50%, -50%);
+  }
+  100% {
+    transform: translateX(50px) translateY(40px) translate(-50%, -50%);
+  }
+}
+
+/*-- Boite sur image au survol --*/
+.animation-boite-opacite a {
+  position: relative;
+  display: block;
+}
+
+.animation-boite-opacite .ecran {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 94%;
+  background: #000 url("../media/zoom.png") center center no-repeat;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.animation-boite-opacite .ecran:hover {
+  opacity: 0.5;
+}
+
+/*-- Animation du menu lateral au clique --*/
+.animation-menu-lateral .top, .animation-menu-lateral .center, .animation-menu-lateral .bottom {
+  transition: all 0.35s;
+}
+
+.animation-menu-lateral.active .top {
+  top: 14px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.animation-menu-lateral.active .center {
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+
+.animation-menu-lateral.active .bottom {
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+/* --- effet typewriter : curseur --- */
+.curseur {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*-- Animation du menu hamburger au clique --*/
+.anim-menu-hamburger .top, .anim-menu-hamburger .center, .anim-menu-hamburger .bottom {
+  transition: all 0.35s;
+}
+
+.anim-menu-hamburger.active .top {
+  top: 14px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.anim-menu-hamburger.active .center {
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+
+.anim-menu-hamburger.active .bottom {
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+/* ----------------------------------------------------
+ SPECIFICATIONS GENERALES (valeurs par défaut)
+ ----------------------------------------------------
+*/
+body {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  padding-top: 2rem;
+}
+
+main {
+  padding-top: 4rem;
+}
+
+/* ----------------------------------------------------
+   OBJETS PARTICULIERS
+   ----------------------------------------------------
+*/
+/*----- HEADER ----*/
+#nom h1, #nom h2 {
+  font-weight: lighter;
+}
+
+#menu {
+  padding-top: .5rem;
+}
+
+/*----- MAIN ----*/
+.imgHover {
+  width: auto;
+  height: auto;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.imgHover:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+#detailProjet {
+  padding-left: 2rem;
+}
+
+#detailProjet .nomProjet {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 5rem 0 .5rem 0;
+}
+
+#detailProjet .nombreProjet {
+  color: #999999;
+}
+
+#detailProjet .description {
+  padding-top: 1rem;
+}
+
+#detailProjet .bouton {
+  border: 1px solid #999999;
+  margin-top: 2rem;
+  padding: .5rem .2rem;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#detailProjet .bouton a {
+  color: #999999;
+  text-decoration: none;
+}
+
+#detailProjet .bouton:hover {
+  border: 1px solid #000;
+}
+
+#detailProjet .bouton:hover a {
+  color: #000;
+}
+
+/*----- FOOTER ----*/
+#slideController {
+  position: relative;
+  top: 0;
+}
+
+#slideController ul {
+  list-style: none;
+  padding: 0;
+}
+
+#slideController li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 .1rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid #cccccc;
+  width: 50px;
+}
+
+#slideController ul li:first-of-type,
+#slideController ul li:last-of-type {
+  display: none;
+}
+
+#slideController li:hover {
+  border-bottom: 2px solid #0B486B;
+}
+
+#slideController li:hover a {
+  opacity: 1;
+}
+
+#slideController li.active:hover {
+  border-bottom: 1px solid #000;
+}
+
+#slideController a {
+  display: block;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+#slideController .active {
+  border-bottom: 1px solid #000;
+}
