@@ -26,50 +26,93 @@
     padding-top: 4rem;
   }
 
-  footer {
-
-  }
-
 /* ----------------------------------------------------
    OBJETS PARTICULIERS
    ----------------------------------------------------
 */
+
+.cache{
+	width:100%;
+	height:100%;
+	position: fixed;
+	background-color:#FFF;
+	z-index:997;
+}
+#wrapper-header, #wrapper-footer {
+	opacity:0;
+
+}
+// #wrapper-main {
+//   opacity: 0;
+//
+// }
+
 
 /*----- HEADER ----*/
 
 #nom {
   h1, h2 {
     font-weight: lighter;
+    z-index: 998;
+    position: relative;
+    display: block;
   }
 }
 
 #menu {
   padding-top: .5rem;
-
 }
 
 /*----- MAIN ----*/
 
-  .imgHover {
+  #imgProjet {
+    opacity: 0;
+    position: relative;
     width: auto;
     height: auto;
+    margin: 0;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-  }
-  .imgHover:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    &:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
   }
 
   #detailProjet {
-    padding-left: 2rem;
+    opacity: 0;
+    left: 5rem;
+    position: relative;
+    @media screen and (min-width: 0px) {
+      padding-left: 0;
+    }
+    @media screen and (min-width: 768px) {
+      padding-left: 2rem;
+    }
+    @media screen and (min-width: 992px) {
+      padding-left: 3rem;
+    }
+    // @media screen and (min-width: 1200px) {
+    //   padding-left: 3.5rem;
+    // }
     .nomProjet {
       font-family: $policeSecondaire;
       font-weight: 900;
       text-transform: uppercase;
-      margin: 5rem 0 .5rem 0;
+      @media screen and (min-width: 0px) {
+        margin: 0 0 .5rem 0;
+      }
+      @media screen and (min-width: 768px) {
+        margin: 1.5rem 0 .5rem 0;
+      }
+      @media screen and (min-width: 992px) {
+        margin: 2.5rem 0 .5rem 0;
+      }
+      @media screen and (min-width: 1200px) {
+        margin: 5rem 0 .5rem 0;
+      }
     }
     .nombreProjet {
       color: $couleurNeutre60;
@@ -99,7 +142,7 @@
 
 /*----- FOOTER ----*/
 
-  #slideController {
+  #pagination {
     position: relative;
     top: 0;
     ul {
@@ -107,39 +150,173 @@
       padding: 0;
     }
     li {
-      display: inline-block;
+      display: none;
       text-align: center;
       margin: 0 .1rem;
       padding-bottom: .5rem;
-      border-bottom: 2px solid $couleurNeutre80;
-      width: 50px;
+      width: 60px;
     }
-    ul li:first-of-type,
-    ul li:last-of-type {
-      display: none;
-    }
-    li:hover {
-      border-bottom: 2px solid $couleur1;
+    @media screen and (min-width: 0px) {
+      ul li:first-of-type,
+      ul li:last-of-type {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: lighter;
+        border: 1px solid $couleurNeutre90;
+      }
       a {
         opacity: 1;
+        text-decoration: none;
+        color: $couleurNeutre30;
+      }
+      span {
+        color: $couleurNeutre90;
+      }
+      li:hover {
+        background: $couleur1;
+        a {
+          color: #fff;
+        }
+      }
+      .disabled:hover {
+        border: 1px solid $couleurNeutre90;
+        background: none;
+        span {
+          color: $couleurNeutre90;
+        }
       }
     }
-    li.active:hover {
-      border-bottom: 1px solid $couleurNeutre;
-    }
-    a {
-      display: block;
-      opacity: 0;
-      -webkit-transition: opacity .5s ease-in-out;
-      -moz-transition: opacity .5s ease-in-out;
-      -ms-transition: opacity .5s ease-in-out;
-      -o-transition: opacity .5s ease-in-out;
-      transition: opacity .5s ease-in-out;
-      font-weight: bold;
-      text-decoration: none;
-      color: $couleurNeutre;
-    }
-    .active {
-      border-bottom: 1px solid $couleurNeutre;
+    @media screen and (min-width: 480px) {
+      li {
+        display: inline-block;
+        border-bottom: 2px solid $couleurNeutre80;
+      }
+      ul li:first-of-type,
+      ul li:last-of-type {
+        display: none;
+      }
+      a {
+        display: block;
+        opacity: 0;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        font-weight: bold;
+        text-decoration: none;
+        color: $couleurNeutre;
+      }
+      li:hover {
+        border-bottom: 2px solid $couleur1;
+        background: none;
+        a {
+          opacity: 1;
+          color: $couleurNeutre;
+        }
+      }
+      li.active:hover {
+        border-bottom: 1px solid $couleurNeutre;
+      }
+      .active {
+        border-bottom: 1px solid $couleurNeutre;
+      }
+      .active span {
+        color: $couleurNeutre;
+      }
     }
   }
+
+  /*--- ABOUT ---*/
+
+    #about {
+      padding-top: 10rem;
+      color: $couleurNeutre100;
+      .nom, .web {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .web {
+        text-transform: uppercase;
+        font-family: $policeSecondaire;
+      }
+      .lien  {
+          color: $couleur2Claire;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 2rem;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding: .5rem 0;
+          &:hover {
+            color: $couleurNeutre100;
+            text-decoration: underline;
+          }
+        }
+      .compte {
+        margin-top: 3rem;
+      }
+      .compte {
+        a {
+          font-size: 5rem;
+          opacity: .5;
+          padding-right: 2rem;
+          color: $couleurNeutre100;
+          text-decoration: none;
+        }
+        a:hover {
+          opacity: 1;
+        }
+      }
+      .titre {
+        text-transform: uppercase;
+        color: $couleurNeutre70;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      .date {
+        color: $couleurNeutre100;
+        font-weight: bold;
+        padding-bottom: .5rem;
+      }
+      .detail {
+        font-weight: lighter;
+      }
+      .contact {
+        position: absolute;
+        bottom: 5rem;
+        a {
+          color: $couleur2;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $couleurNeutre100;
+          text-decoration: underline;
+        }
+      }
+      .menu {
+        margin-top: 3rem;
+        text-align: right;
+        a {
+          display: block;
+        }
+      }
+    }
+
+    #mesProjets {
+      position: absolute;
+      opacity: 0;
+      z-index: 999;
+      top: 70%;
+  		left: 50%;
+  		transform: translateX(-50%) translateY(-50%);
+      border: 1px solid $couleurNeutre70;
+      color: $couleurNeutre70;
+      padding: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        border: 1px solid $couleur1;
+        color: $couleur1;
+      }
+    }

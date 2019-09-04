@@ -8,11 +8,15 @@
   @include('templates.partials.head')
 
  <body>
+
+   @section('cache')
+   @show
+
    <!-- Navigation -->
    @include('templates.partials.header')
 
    <!-- CONTENU -->
-   <main class="boite-fixe-resp grille-g">
+   <main id="wrapper-main" class="boite-fixe-resp grille-g">
      @section('contenu')
      @show
    </main>

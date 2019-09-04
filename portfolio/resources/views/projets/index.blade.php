@@ -10,20 +10,18 @@
    @foreach ($projets as $projet)
 
      <!-- image projets -->
-     <figure id="imgProjet" class="xs6">
-       <div class="imgHover pulse">
-         <a href="{{ $projet->site }}" target="_blank">
-           <img src="{{asset('storage/'.$projet->image) }}" alt="{{ $projet->nom }}">
-         </a>
-       </div>
+     <figure id="imgProjet" class="xs12 m6 pulse">
+       <a href="{{ $projet->site }}" target="_blank">
+         <img src="{{asset('storage/'.$projet->image) }}" alt="{{ $projet->nom }}">
+       </a>
        <figcaption class="xs-cache">{{ $projet->nom }}</figcaption>
      </figure>
 
      <!-- détails projets -->
-     <div id="detailProjet" class="xs6">
-       <h1 class="nomProjet xs-contenu-xl" style="color:{{ $projet->couleur }}">{{ $projet->nom }}</h1>
+     <div id="detailProjet" class="xs12 m6">
+       <h1 class="nomProjet xs-contenu-xl s-contenu-xxl m-contenu-xl l-contenu-xxl" style="color:{{ $projet->couleur }}">{{ $projet->nom }}</h1>
        <div class="nombreProjet xs-contenu-s">{{ $projet->id }}/{{ $NbrProjets }}</div>
-       <p class="description xs-contenu-s">{!! $projet->description !!}</p>
+       <div class="description xs-contenu-xs s-contenu-s m-contenu-xs l-contenu-s">{!! $projet->description !!}</div>
        <div class="bouton">
          <a href="{{ $projet->site }}" target="_blank" >Voir le site</a>
        </div>

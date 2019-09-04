@@ -98,6 +98,24 @@
 		}
 	}
 
+	/*-- Bonjour --*/
+
+	.bonjour {
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		text-align: center;
+		position: absolute;
+		color: $couleurNeutre90;
+		font-family: $policeSecondaire;
+		font-size: 10rem;
+	}
+
+
+
 	/*-- Animation du menu hamburger au clique --*/
 
 	.anim-menu-hamburger .top, .anim-menu-hamburger .center, .anim-menu-hamburger .bottom {

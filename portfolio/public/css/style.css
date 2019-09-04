@@ -119,6 +119,21 @@
   }
 }
 
+/*-- Bonjour --*/
+.bonjour {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  color: #e6e6e6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10rem;
+}
+
 /*-- Animation du menu hamburger au clique --*/
 .anim-menu-hamburger .top, .anim-menu-hamburger .center, .anim-menu-hamburger .bottom {
   transition: all 0.35s;
@@ -161,9 +176,24 @@ main {
    OBJETS PARTICULIERS
    ----------------------------------------------------
 */
+.cache {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #FFF;
+  z-index: 997;
+}
+
+#wrapper-header, #wrapper-footer {
+  opacity: 0;
+}
+
 /*----- HEADER ----*/
 #nom h1, #nom h2 {
   font-weight: lighter;
+  z-index: 998;
+  position: relative;
+  display: block;
 }
 
 #menu {
@@ -171,29 +201,75 @@ main {
 }
 
 /*----- MAIN ----*/
-.imgHover {
+#imgProjet {
+  opacity: 0;
+  position: relative;
   width: auto;
   height: auto;
+  margin: 0;
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-.imgHover:hover {
+#imgProjet:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
 #detailProjet {
-  padding-left: 2rem;
+  opacity: 0;
+  left: 5rem;
+  position: relative;
+}
+
+@media screen and (min-width: 0px) {
+  #detailProjet {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #detailProjet {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #detailProjet {
+    padding-left: 3rem;
+  }
 }
 
 #detailProjet .nomProjet {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 5rem 0 .5rem 0;
+}
+
+@media screen and (min-width: 0px) {
+  #detailProjet .nomProjet {
+    margin: 0 0 .5rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #detailProjet .nomProjet {
+    margin: 1.5rem 0 .5rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #detailProjet .nomProjet {
+    margin: 2.5rem 0 .5rem 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #detailProjet .nomProjet {
+    margin: 5rem 0 .5rem 0;
+  }
 }
 
 #detailProjet .nombreProjet {
@@ -227,55 +303,198 @@ main {
 }
 
 /*----- FOOTER ----*/
-#slideController {
+#pagination {
   position: relative;
   top: 0;
 }
 
-#slideController ul {
+#pagination ul {
   list-style: none;
   padding: 0;
 }
 
-#slideController li {
-  display: inline-block;
+#pagination li {
+  display: none;
   text-align: center;
   margin: 0 .1rem;
   padding-bottom: .5rem;
-  border-bottom: 2px solid #cccccc;
-  width: 50px;
+  width: 60px;
 }
 
-#slideController ul li:first-of-type,
-#slideController ul li:last-of-type {
-  display: none;
+@media screen and (min-width: 0px) {
+  #pagination ul li:first-of-type,
+  #pagination ul li:last-of-type {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: lighter;
+    border: 1px solid #e6e6e6;
+  }
+  #pagination a {
+    opacity: 1;
+    text-decoration: none;
+    color: #4d4d4d;
+  }
+  #pagination span {
+    color: #e6e6e6;
+  }
+  #pagination li:hover {
+    background: #0B486B;
+  }
+  #pagination li:hover a {
+    color: #fff;
+  }
+  #pagination .disabled:hover {
+    border: 1px solid #e6e6e6;
+    background: none;
+  }
+  #pagination .disabled:hover span {
+    color: #e6e6e6;
+  }
 }
 
-#slideController li:hover {
-  border-bottom: 2px solid #0B486B;
+@media screen and (min-width: 480px) {
+  #pagination li {
+    display: inline-block;
+    border-bottom: 2px solid #cccccc;
+  }
+  #pagination ul li:first-of-type,
+  #pagination ul li:last-of-type {
+    display: none;
+  }
+  #pagination a {
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+  #pagination li:hover {
+    border-bottom: 2px solid #0B486B;
+    background: none;
+  }
+  #pagination li:hover a {
+    opacity: 1;
+    color: #000;
+  }
+  #pagination li.active:hover {
+    border-bottom: 1px solid #000;
+  }
+  #pagination .active {
+    border-bottom: 1px solid #000;
+  }
+  #pagination .active span {
+    color: #000;
+  }
 }
 
-#slideController li:hover a {
+/*--- ABOUT ---*/
+#about {
+  padding-top: 10rem;
+  color: white;
+}
+
+#about .nom, #about .web {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#about .web {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+#about .lien {
+  color: #6abdbd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: .5rem 0;
+}
+
+#about .lien:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#about .compte {
+  margin-top: 3rem;
+}
+
+#about .compte a {
+  font-size: 5rem;
+  opacity: .5;
+  padding-right: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+#about .compte a:hover {
   opacity: 1;
 }
 
-#slideController li.active:hover {
-  border-bottom: 1px solid #000;
+#about .titre {
+  text-transform: uppercase;
+  color: #b3b3b3;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
-#slideController a {
-  display: block;
-  opacity: 0;
-  -webkit-transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  -ms-transition: opacity .5s ease-in-out;
-  -o-transition: opacity .5s ease-in-out;
-  transition: opacity .5s ease-in-out;
+#about .date {
+  color: white;
   font-weight: bold;
-  text-decoration: none;
-  color: #000;
+  padding-bottom: .5rem;
 }
 
-#slideController .active {
-  border-bottom: 1px solid #000;
+#about .detail {
+  font-weight: lighter;
+}
+
+#about .contact {
+  position: absolute;
+  bottom: 5rem;
+}
+
+#about .contact a {
+  color: #3B8686;
+  text-decoration: none;
+}
+
+#about .contact a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#about .menu {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+#about .menu a {
+  display: block;
+}
+
+#mesProjets {
+  position: absolute;
+  opacity: 0;
+  z-index: 999;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 1px solid #b3b3b3;
+  color: #b3b3b3;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#mesProjets:hover {
+  border: 1px solid #0B486B;
+  color: #0B486B;
 }

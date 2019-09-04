@@ -439,15 +439,15 @@ figure {
 
 /*----- TAILLES DES CONTENUS -----*/
 .xs-contenu-xs {
-  font-size: 0.8rem;
-}
-
-.xs-contenu-s {
   font-size: 1rem;
 }
 
-.xs-contenu-m {
+.xs-contenu-s {
   font-size: 1.3rem;
+}
+
+.xs-contenu-m {
+  font-size: 1.7rem;
 }
 
 .xs-contenu-l {
@@ -465,13 +465,13 @@ figure {
 /*Pour les écrans small (à partir de 480px)*/
 @media only screen and (min-width: 480px) {
   .s-contenu-xs {
-    font-size: 0.8rem;
-  }
-  .s-contenu-s {
     font-size: 1rem;
   }
-  .s-contenu-m {
+  .s-contenu-s {
     font-size: 1.3rem;
+  }
+  .s-contenu-m {
+    font-size: 1.7rem;
   }
   .s-contenu-l {
     font-size: 2.5rem;
@@ -487,13 +487,13 @@ figure {
 /*Pour les écrans medium (à partir de 768px)*/
 @media only screen and (min-width: 768px) {
   .m-contenu-xs {
-    font-size: 0.8rem;
-  }
-  .m-contenu-s {
     font-size: 1rem;
   }
-  .m-contenu-m {
+  .m-contenu-s {
     font-size: 1.3rem;
+  }
+  .m-contenu-m {
+    font-size: 1.7rem;
   }
   .m-contenu-l {
     font-size: 2.5rem;
@@ -509,13 +509,13 @@ figure {
 /*Pour les écrans larges (à partir de 992px)*/
 @media only screen and (min-width: 992px) {
   .l-contenu-xs {
-    font-size: 0.8rem;
-  }
-  .l-contenu-s {
     font-size: 1rem;
   }
-  .l-contenu-m {
+  .l-contenu-s {
     font-size: 1.3rem;
+  }
+  .l-contenu-m {
+    font-size: 1.7rem;
   }
   .l-contenu-l {
     font-size: 2.5rem;
@@ -531,13 +531,13 @@ figure {
 /*Pour les écrans xlarges (à partir de 1200px)*/
 @media only screen and (min-width: 1200px) {
   .xl-contenu-xs {
-    font-size: 0.8rem;
-  }
-  .xl-contenu-s {
     font-size: 1rem;
   }
-  .xl-contenu-m {
+  .xl-contenu-s {
     font-size: 1.3rem;
+  }
+  .xl-contenu-m {
+    font-size: 1.7rem;
   }
   .xl-contenu-l {
     font-size: 2.5rem;
@@ -719,7 +719,7 @@ figure {
   display: block;
   position: relative;
   width: 45px;
-  height: 2px;
+  height: 3px;
   background: #000;
 }
 
@@ -767,18 +767,6 @@ figure {
   display: block;
   padding: 0.5rem;
   text-align: center;
-}
-
-.menu-cover a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-}
-
-.menu-cover a:hover,
-.menu-cover li.actif a,
-.menu-cover a.actif {
-  color: #83caf2;
 }
 
 /*
@@ -963,6 +951,21 @@ figure {
   50% {
     border-color: transparent;
   }
+}
+
+/*-- Bonjour --*/
+.bonjour {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  color: #cccccc;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10rem;
 }
 
 /*-- Animation du menu hamburger au clique --*/
