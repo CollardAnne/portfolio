@@ -184,13 +184,8 @@ main {
   z-index: 997;
 }
 
-#wrapper-header, #wrapper-footer {
-  opacity: 0;
-}
-
 /*----- HEADER ----*/
 #nom h1, #nom h2 {
-  font-weight: lighter;
   z-index: 998;
   position: relative;
   display: block;
@@ -204,8 +199,6 @@ main {
 #imgProjet {
   opacity: 0;
   position: relative;
-  width: auto;
-  height: auto;
   margin: 0;
   -webkit-transform: scale(1);
   transform: scale(1);

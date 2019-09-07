@@ -14,7 +14,7 @@
      // chekc if text isn't finished yet
      if (i < (text.length)) {
        // add next character to h1
-      document.querySelector(".typewriter").innerHTML = text.substring(0, i+1) +'<span class="curseur" aria-hidden="true"></span>';
+      document.querySelector(".typewriter").innerHTML = text.substring(0, i+1) +'<span class="curseur contenu-gras" aria-hidden="true"></span>';
 
        // wait for a while and call this function again for next character
        setTimeout(function() {

@@ -6,12 +6,12 @@
 
    $(document).ready(function() {
   		$.localScroll();
-  		// /$(".cache").delay(500).fadeOut(500);
-  		$("#wrapper-header").delay(500).animate({opacity:'1'},500);
-  		$("#wrapper-footer").delay(1000).animate({opacity:'1'},500);
-      $("#imgProjet").delay(1000).animate({opacity:'1'},500);
-      $("#detailProjet").delay(1500).animate({opacity:'1', left:'0'},1000);
-      $("#mesProjets").delay(2000).animate({opacity:'1'},1000);
+  		// $(".cache").delay(1000).fadeOut(500);
+  	//	$("#wrapper-header").delay(500).animate({opacity:'1'},500);
+  		// $("#wrapper-footer").delay(1200).animate({opacity:'1'},500);
+      $("#imgProjet").delay(500).animate({opacity:'1'},500);
+      $("#detailProjet").delay(1000).animate({opacity:'1', left:'0'},1000);
+      //$("#mesProjets").delay(1000).animate({opacity:'1'},1000);
 	});
 
 

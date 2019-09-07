@@ -7,8 +7,8 @@
      <div id="wrapper-header">
        <!-- Entete -->
        <div id="nom" class="boite-flottante-gauche">
-         <h1 class="boite-marge-nulle xs-contenu-s">anne collard</h1>
-         <h2 class="boite-marge-nulle xs-contenu-s typewriter">web developer_</h2>
+         <h1 class="boite-marge-nulle xs-contenu-s contenu-fin">anne collard</h1>
+         <h2 class="boite-marge-nulle typewriter">web developer_</h2>
        </div>
 
        <!-- MENU -->
@@ -25,7 +25,7 @@
 
        <div id="about" class="boite-fixe-resp grille-g">
          <div class="nom xs-contenu-gauche xs-contenu-s">Anne Collard</div>
-         <div class="web xs-contenu-gauche xs-contenu-l">Web Developer & Web Designer</div>
+         <div class="web xs-contenu-gauche xs-contenu-l">Web Developer | Web Designer</div>
          <div class="cv xs6 compte ">
            <div class="titre">Etudes & Formation</div>
            <div class="date">2017 - 2019 : <span class="detail">BES - Web Developer & de Web designer à l’Institut d'Enseignement de Promotion Sociale de Fléron.</span></div>
@@ -39,7 +39,7 @@
            </a>
          </div>
          <div class="xs6 menu">
-           <a class="lien" href="{{ route('projets') }}">Mes projets</a>
+           <a class="lien" href="{{ route('homepage') }}">Mes projets</a>
            <a class="lien" href="#">Mon cv</a>
          </div>
 
