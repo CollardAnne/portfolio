@@ -162,6 +162,7 @@
 body {
   color: #000;
   font-family: "Raleway", sans-serif;
+  margin: 0;
 }
 
 header {
@@ -301,6 +302,24 @@ footer {
 }
 
 /*----- FOOTER ----*/
+#wrapper-footer ul {
+  list-style: none;
+  text-align: center;
+}
+
+#wrapper-footer li {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+#wrapper-footer a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
 #pagination {
   position: relative;
   bottom: 3rem;

@@ -8,11 +8,11 @@
  @section('contenu')
 
    <div id="slider">
-    <div id="slide-container" class="xs-cache">
+    <ul id="slide-container" class="xs-cache">
 
    @foreach ($projets as $projet)
 
-     <div id="slide{{ $projet->id }}" class="slide grille-g">
+     <li id="slide{{ $projet->id }}" class="slide grille-g">
        <!-- image projets -->
        <figure  class="xs12 m6 pulse imgProjet">
          <a href="{{ $projet->site }}" target="_blank">
@@ -30,11 +30,11 @@
            <a href="{{ $projet->site }}" target="_blank" >Voir le site</a>
          </div>
        </div>
-     </div>
+     </li>
 
    @endforeach
 
- </div>
+ </ul>
 </div>
 
 

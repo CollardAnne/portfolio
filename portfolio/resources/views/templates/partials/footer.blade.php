@@ -11,9 +11,9 @@
         </div>
       @endif --}}
 
-      <ul class="nav">
+      <ul class="nav-slide">
         @foreach ($projets as $projet)
-          <li><a href="#slide{{ $projet->id }}">Projet {{ $projet->id }} </a></li>
+          <li><a href="#">{{ $projet->id }}</a></li>
         @endforeach
       </ul>
 

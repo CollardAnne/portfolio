@@ -16,6 +16,7 @@
   body {
     color: $couleurNeutre;
     font-family: $policePrincipale;
+    margin: 0;
   }
 
   header {
@@ -148,6 +149,23 @@
 
 /*----- FOOTER ----*/
 
+  #wrapper-footer {
+    ul {
+      list-style: none;
+    text-align: center;
+    }
+    li {
+      display: inline-block;
+      text-align: center;
+      font-size: 2rem;
+      padding: 0 1em;
+      font-family: $policeSecondaire;
+    }
+    a {
+      text-decoration: none;
+      color: $couleurNeutre30;
+    }
+  }
   #pagination {
     position: relative;
     bottom: 3rem;
