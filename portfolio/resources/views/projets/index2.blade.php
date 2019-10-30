@@ -7,16 +7,13 @@
  @extends('templates.app')
  @section('contenu')
 
-   <div id="slider">
-    <div id="slide-container" class="xs-cache">
-
    @foreach ($projets as $projet)
 
-     <div id="slide{{ $projet->id }}" class="slide grille-g">
+
        <!-- image projets -->
-       <figure  class="xs12 m6 pulse imgProjet">
+       <figure id="imgProjet" class="xs12 m6 pulse">
          <a href="{{ $projet->site }}" target="_blank">
-           <img src="{{asset('storage/'.$projet->image) }}" alt="{{ $projet->nom }}" >
+           <img src="{{asset('storage/'.$projet->image) }}" alt="{{ $projet->nom }}">
          </a>
          <figcaption class="xs-cache">{{ $projet->nom }}</figcaption>
        </figure>
@@ -30,12 +27,8 @@
            <a href="{{ $projet->site }}" target="_blank" >Voir le site</a>
          </div>
        </div>
-     </div>
 
+       
    @endforeach
-
- </div>
-</div>
-
 
  @stop

@@ -3,20 +3,19 @@
  --}}
 
  <!-- HEADER -->
-   <header id="header" class="boite-fixe-resp boite-clearfix">
-     <div id="wrapper-header">
+   <header id="header" class="boite-fixe-resp">
+     <div id="wrapper-header" class="grille-g">
        <!-- Entete -->
-       <div id="nom" class="boite-flottante-gauche">
+       <div id="nom" class="xs6">
          <h1 class="boite-marge-nulle xs-contenu-s contenu-fin">anne collard</h1>
          <h2 class="boite-marge-nulle typewriter">web developer_</h2>
        </div>
 
        <!-- MENU -->
        <!-- Menu hamburger -->
-       <div id="menu" class="boite-flottante-droite menu-hamburger anim-menu-hamburger">
-         <div class="top"></div>
-         <div class="center"></div>
-         <div class="bottom"></div>
+       <div id="menu" class="xs6 menu-toggle xs-contenu-xs">
+         <div class="profil active">profil</div>
+         <div class="projet">projets</div>
        </div>
      </div>
 
@@ -25,27 +24,34 @@
 
        <div id="about" class="boite-fixe-resp grille-g">
          <div class="nom xs-contenu-gauche xs-contenu-s">Anne Collard</div>
-         <div class="web xs-contenu-gauche xs-contenu-l">Web Developer | Web Designer</div>
-         <div class="cv xs6 compte ">
-           <div class="titre">Etudes & Formation</div>
-           <div class="date">2017 - 2019 : <span class="detail">BES - Web Developer & de Web designer à l’Institut d'Enseignement de Promotion Sociale de Fléron.</span></div>
-           <div class="date">1999 - 2002 : <span class="detail">BAC court - Décoration et architecture d'intérieur à l’École supérieure des arts Saint-Luc de Liège.</span></div>
-           <div class="titre">Mes comptes</div>
-           <a href="https://github.com/CollardAnne">
-             <i class="fab fa-github"></i>
-           </a>
-           <a href="https://bitbucket.org/%7B51b1a787-e44b-4bea-8849-9c2f0205d4ff%7D/">
-             <i class="fab fa-bitbucket"></i>
-           </a>
+         <div class="web xs-contenu-gauche xs-contenu-l contenu-gras">Web Developer | Web Designer</div>
+
+         <div class="xs4 boite">
+           {{-- <i class="fas fa-pencil-alt"></i> --}}
+           <div class="titre"><i class="fas fa-pencil-alt"></i> Designer</div>
+           <div class="contenu-gras padd1">Ce que j'aime concevoir:</div>
+           <div class="contenu-fin xs-contenu-s padd2">UX, UI, Web, Mobile, Applications, Logos</div>
+           <div class="contenu-gras padd1">Outils de conception:</div>
+           <div class="contenu-fin xs-contenu-s padd2">Photoshop, Illustrator, InDesign, AdobeXD</div>
          </div>
-         <div class="xs6 menu">
-           <a class="lien" href="{{ route('homepage') }}">Mes projets</a>
-           <a class="lien" href="#">Mon cv</a>
+         <div class="xs4 boite">
+           {{-- <i class="fas fa-code"></i> --}}
+           <div class="titre"><i class="fas fa-code"></i> Developer</div>
+           <div class="contenu-gras padd1">Compétences:</div>
+           <div class="contenu-fin xs-contenu-s padd2">HTML5, CSS3 (SASS), JQUERY, PHP/MySQL, SQL, POO, FRAMEWORKS, AJAX, WordPress, Responsive Layouts ...</div>
+           <div class="contenu-gras padd1">Outils de conception:</div>
+           <div class="contenu-fin xs-contenu-s padd2">Atom, Bitbucket, Github, ...</div>
+         </div>
+         <div class="xs1"></div>
+         <div class="xs3 menu">
+           <a class="lien" href="#">Github</a>
+           <a class="lien" href="#"> Bitbucket</a>
+           <div class="contact">
+             <a href="#">Télécharger mon cv</a>
+             <a href="#">Contactez-moi</a>
+           </div>
          </div>
 
-         <div class="contact">
-           Si vous voulez en savoir plus sur moi, mon travail n'hésitez pas à me contacter à <a href="#">collard.anne.j@gmail.com</a>
-         </div>
        </div>
 
 

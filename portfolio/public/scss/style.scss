@@ -26,6 +26,12 @@
     padding-top: 4rem;
   }
 
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
 /* ----------------------------------------------------
    OBJETS PARTICULIERS
    ----------------------------------------------------
@@ -65,11 +71,11 @@
 
 /*----- MAIN ----*/
 
-  #imgProjet {
-    opacity: 0;
+  .imgProjet {
+    //opacity: 0;
     position: relative;
-    // width: 100%;
-    // height: auto;
+    width: 100%;
+    height: auto;
     margin: 0;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -82,8 +88,8 @@
   }
 
   #detailProjet {
-    opacity: 0;
-    left: 5rem;
+    //opacity: 0;
+    //left: 5rem;
     position: relative;
     @media screen and (min-width: 0px) {
       padding-left: 0;
@@ -144,7 +150,7 @@
 
   #pagination {
     position: relative;
-    top: 0;
+    bottom: 3rem;
     ul {
       list-style: none;
       padding: 0;
@@ -153,8 +159,8 @@
       display: none;
       text-align: center;
       margin: 0 .1rem;
-      padding-bottom: .5rem;
-      width: 60px;
+      padding: .5rem 0;
+      width: 10px;
     }
     @media screen and (min-width: 0px) {
       ul li:first-of-type,
@@ -189,7 +195,7 @@
     @media screen and (min-width: 480px) {
       li {
         display: inline-block;
-        border-bottom: 2px solid $couleurNeutre80;
+        border-right: 2px solid $couleurNeutre80;
       }
       ul li:first-of-type,
       ul li:last-of-type {
@@ -208,18 +214,20 @@
         color: $couleurNeutre;
       }
       li:hover {
-        border-bottom: 2px solid $couleur1;
+        border-right: 2px solid $couleur1;
         background: none;
+        width: 30px;
         a {
           opacity: 1;
           color: $couleurNeutre;
         }
       }
       li.active:hover {
-        border-bottom: 1px solid $couleurNeutre;
+        border-right: 1px solid $couleurNeutre;
       }
       .active {
-        border-bottom: 1px solid $couleurNeutre;
+        border-right: 1px solid $couleurNeutre;
+        width: 30px;
       }
       .active span {
         color: $couleurNeutre;
@@ -230,48 +238,45 @@
   /*--- ABOUT ---*/
 
     #about {
-      padding-top: 10rem;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translateX(-50%) translateY(-50%);
       color: $couleurNeutre100;
+      span {
+        font-family: $policePrincipale;
+      }
       .nom, .web {
         margin-top: 0;
         margin-bottom: 0;
       }
       .web {
         text-transform: uppercase;
-        font-family: $policeSecondaire;
       }
-      .lien  {
-          color: $couleur2Claire;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 2rem;
-          margin-top: 0;
-          margin-bottom: 0;
-          padding: .5rem 0;
-          &:hover {
-            color: $couleurNeutre100;
-            text-decoration: underline;
-          }
+
+      .boite {
+        padding: .5rem;
+        margin: 2rem 1rem;
+        i {
+         color: $couleur1Claire;
+          font-size: .8rem;
+          padding-top: 1rem;
+          border: 1px solid $couleur1Claire;
+          border-radius: 20px;
+          padding: .5rem;
         }
-      .compte {
-        margin-top: 3rem;
-      }
-      .compte {
-        a {
-          font-size: 5rem;
-          opacity: .5;
-          padding-right: 2rem;
-          color: $couleurNeutre100;
-          text-decoration: none;
+        .padd1 {
+          padding: 1rem 0 0;
+          color: $couleurNeutre70;
         }
-        a:hover {
-          opacity: 1;
+        .padd2 {
+          padding: 1rem 0 2rem;
         }
       }
       .titre {
+        font-size: 1.1rem;
         text-transform: uppercase;
-        color: $couleurNeutre70;
-        padding-bottom: 1rem;
+        color: $couleur1Claire;
         padding-top: 1rem;
       }
       .date {
@@ -283,19 +288,37 @@
         font-weight: lighter;
       }
       .contact {
-        position: absolute;
-        bottom: 5rem;
+        padding-top: 2rem;
         a {
-          color: $couleur2;
+          font-family: $policeSecondaire;
+          color: $couleur2Claire;
           text-decoration: none;
+          padding-top: 1rem;
+          font-size: 1.2rem;
         }
         a:hover {
           color: $couleurNeutre100;
           text-decoration: underline;
         }
       }
+      .lien {
+        // position: relative;
+        // top: 50%;
+        // transform:  translateY(-50%);
+        font-family: $policeSecondaire;
+        color: $couleur2Claire;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: .5rem 0;
+        &:hover {
+          color: $couleurNeutre100;
+          text-decoration: underline;
+        }
+      }
       .menu {
-        margin-top: 3rem;
         text-align: right;
         a {
           display: block;
@@ -319,4 +342,13 @@
         border: 1px solid $couleur1;
         color: $couleur1;
       }
+    }
+
+    #slider {
+      overflow:hidden;
+    }
+
+    .slide {
+      float:left;
+      margin: 1rem 0;
     }

@@ -16,7 +16,7 @@
    @include('templates.partials.header')
 
    <!-- CONTENU -->
-   <main id="wrapper-main" class="boite-fixe-resp grille-g">
+   <main id="wrapper-main" class="boite-fixe-resp">
      @section('contenu')
      @show
    </main>

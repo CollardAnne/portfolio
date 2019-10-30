@@ -172,6 +172,12 @@ main {
   padding-top: 4rem;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 /* ----------------------------------------------------
    OBJETS PARTICULIERS
    ----------------------------------------------------
@@ -196,9 +202,10 @@ main {
 }
 
 /*----- MAIN ----*/
-#imgProjet {
-  opacity: 0;
+.imgProjet {
   position: relative;
+  width: 100%;
+  height: auto;
   margin: 0;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -206,14 +213,12 @@ main {
   transition: .3s ease-in-out;
 }
 
-#imgProjet:hover {
+.imgProjet:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
 #detailProjet {
-  opacity: 0;
-  left: 5rem;
   position: relative;
 }
 
@@ -298,7 +303,7 @@ main {
 /*----- FOOTER ----*/
 #pagination {
   position: relative;
-  top: 0;
+  bottom: 3rem;
 }
 
 #pagination ul {
@@ -310,8 +315,8 @@ main {
   display: none;
   text-align: center;
   margin: 0 .1rem;
-  padding-bottom: .5rem;
-  width: 60px;
+  padding: .5rem 0;
+  width: 10px;
 }
 
 @media screen and (min-width: 0px) {
@@ -348,7 +353,7 @@ main {
 @media screen and (min-width: 480px) {
   #pagination li {
     display: inline-block;
-    border-bottom: 2px solid #cccccc;
+    border-right: 2px solid #cccccc;
   }
   #pagination ul li:first-of-type,
   #pagination ul li:last-of-type {
@@ -367,18 +372,20 @@ main {
     color: #000;
   }
   #pagination li:hover {
-    border-bottom: 2px solid #0B486B;
+    border-right: 2px solid #0B486B;
     background: none;
+    width: 30px;
   }
   #pagination li:hover a {
     opacity: 1;
     color: #000;
   }
   #pagination li.active:hover {
-    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
   }
   #pagination .active {
-    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 30px;
   }
   #pagination .active span {
     color: #000;
@@ -387,8 +394,11 @@ main {
 
 /*--- ABOUT ---*/
 #about {
-  padding-top: 10rem;
   color: white;
+}
+
+#about span {
+  font-family: "Raleway", sans-serif;
 }
 
 #about .nom, #about .web {
@@ -398,44 +408,35 @@ main {
 
 #about .web {
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
 }
 
-#about .lien {
-  color: #6abdbd;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: .5rem 0;
+#about .boite {
+  padding: .5rem;
+  margin: 2rem 1rem;
 }
 
-#about .lien:hover {
-  color: white;
-  text-decoration: underline;
+#about .boite i {
+  color: #83caf2;
+  font-size: .8rem;
+  padding-top: 1rem;
+  border: 1px solid #83caf2;
+  border-radius: 20px;
+  padding: .5rem;
 }
 
-#about .compte {
-  margin-top: 3rem;
+#about .boite .padd1 {
+  padding: 1rem 0 0;
+  color: #b3b3b3;
 }
 
-#about .compte a {
-  font-size: 5rem;
-  opacity: .5;
-  padding-right: 2rem;
-  color: white;
-  text-decoration: none;
-}
-
-#about .compte a:hover {
-  opacity: 1;
+#about .boite .padd2 {
+  padding: 1rem 0 2rem;
 }
 
 #about .titre {
+  font-size: 1.1rem;
   text-transform: uppercase;
-  color: #b3b3b3;
-  padding-bottom: 1rem;
+  color: #83caf2;
   padding-top: 1rem;
 }
 
@@ -450,13 +451,15 @@ main {
 }
 
 #about .contact {
-  position: absolute;
-  bottom: 5rem;
+  padding-top: 2rem;
 }
 
 #about .contact a {
-  color: #3B8686;
+  font-family: "Montserrat", sans-serif;
+  color: #6abdbd;
   text-decoration: none;
+  padding-top: 1rem;
+  font-size: 1.2rem;
 }
 
 #about .contact a:hover {
@@ -464,8 +467,23 @@ main {
   text-decoration: underline;
 }
 
+#about .lien {
+  font-family: "Montserrat", sans-serif;
+  color: #6abdbd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: .5rem 0;
+}
+
+#about .lien:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 #about .menu {
-  margin-top: 3rem;
   text-align: right;
 }
 
@@ -490,4 +508,13 @@ main {
 #mesProjets:hover {
   border: 1px solid #0B486B;
   color: #0B486B;
+}
+
+#slider {
+  overflow: hidden;
+}
+
+.slide {
+  float: left;
+  margin: 1rem 0;
 }

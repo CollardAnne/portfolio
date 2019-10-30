@@ -769,6 +769,48 @@ figure {
   text-align: center;
 }
 
+/*--- Menu Toogle ---*/
+.menu-toggle div {
+  position: relative;
+  display: none;
+  float: right;
+  border: 0.5px solid #999999;
+  border-radius: 5rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  color: #999999;
+  z-index: 999;
+  height: 80%;
+  width: 100px;
+  cursor: pointer;
+}
+
+.menu-toggle .profil:hover {
+  border: 1px solid #000;
+  color: #000;
+  font-weight: normal;
+}
+
+.menu-toggle .profil.active {
+  display: block;
+}
+
+.menu-toggle .projet.active {
+  display: block;
+  border: 0.5px solid #cccccc;
+  color: #cccccc;
+}
+
+.menu-toggle .contact.active {
+  display: block;
+}
+
+.menu-toggle .projet.active:hover {
+  border: 1px solid white;
+  color: white;
+  font-weight: normal;
+}
+
 /*
   ./scss/framework/modules/_visibilites.scss
   Module des visibilités

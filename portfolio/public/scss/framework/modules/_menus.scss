@@ -192,3 +192,44 @@
      // .menu-cover a.actif {
      //   color: $menuCoverCouleurTexteOn;
      // }
+
+    /*--- Menu Toogle ---*/
+
+    .menu-toggle {
+
+      div {
+        position: relative;
+        display: none;
+        float: right;
+        border: .5px solid $couleurNeutre60;
+        border-radius: 5rem;
+        padding: .5rem 1rem;
+        text-align: center;
+        color: $couleurNeutre60;
+        z-index: 999;
+        height: 80%;
+        width: 100px;
+        cursor: pointer;
+      }
+      .profil:hover {
+        border: 1px solid $couleurNeutre;
+        color: $couleurNeutre;
+        font-weight: normal;
+      }
+      .profil.active {
+        display: block;
+      }
+      .projet.active {
+        display: block;
+        border: .5px solid $couleurNeutre80;
+        color: $couleurNeutre80;
+      }
+      .contact.active {
+        display: block;
+      }
+      .projet.active:hover {
+        border: 1px solid $couleurNeutre100;
+        color: $couleurNeutre100;
+        font-weight: normal;
+      }
+    }

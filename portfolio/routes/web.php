@@ -15,16 +15,9 @@
 //     return view('welcome');
 // });
 
-
-
 // Routes par défaut
 
 Route::get('/', 'ProjetsController@index')->name('homepage');
-
-// Routes des projets
-//
-// Route::get('projets/', 'ProjetsController@index')->name('projets');
-
 
 // Routes : Voyager
 //

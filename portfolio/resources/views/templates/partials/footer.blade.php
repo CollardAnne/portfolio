@@ -5,15 +5,16 @@
  <!-- FOOTER -->
  <footer id="wrapper-footer">
 
-      {{-- @if (\Request::is('projets')) --}}
-
-        <div id="pagination" class="boite-fixe-resp xs-contenu-centre">
+      {{-- @if (\Request::is('projets'))
+        <div id="pagination" class="boite-fixe-resp">
           {{ $projets->links()}}
         </div>
+      @endif --}}
 
-
-      {{-- @endif --}}
-
-
+      <ul class="nav">
+        @foreach ($projets as $projet)
+          <li><a href="#slide{{ $projet->id }}">Projet {{ $projet->id }} </a></li>
+        @endforeach
+      </ul>
 
  </footer>
