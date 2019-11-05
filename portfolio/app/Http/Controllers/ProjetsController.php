@@ -6,11 +6,6 @@
 
        class ProjetsController extends Controller {
 
-         // public function index(){
-         //   $projets = ProjetsMdl::paginate(1);
-         //   $NbrProjets = ProjetsMdl::count();
-         //   return View::make('projets.index', ['projets' => $projets, 'NbrProjets' => $NbrProjets ]);
-         // }
          public function index(){
            $projets = ProjetsMdl::get();
            $NbrProjets = ProjetsMdl::count();

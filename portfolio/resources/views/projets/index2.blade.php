@@ -8,7 +8,7 @@
  @section('contenu')
 
    <div id="slider">
-    <ul id="slide-container">
+    <ul id="slide-container" class="xs-cache">
 
    @foreach ($projets as $projet)
 
@@ -24,7 +24,12 @@
        <!-- détails projets -->
        <div id="detailProjet" class="xs12 m6">
          <h1 class="nomProjet xs-contenu-xl s-contenu-xxl m-contenu-xl l-contenu-xxl" style="color:{{ $projet->couleur }}">{{ $projet->nom }}</h1>
-         <div class="nombreProjet xs-contenu-s">{{ $projet->id }}/{{ $NbrProjets }}</div>
+
+         <div id="progress">
+           <div style="background-color: {{ $projet->couleur }}"></div>
+         </div>
+         <div class="nombreProjet xs-contenu-xs">{{ $projet->id }}/{{ $NbrProjets }}</div>
+
          <div class="description xs-contenu-xs s-contenu-s m-contenu-xs l-contenu-s">{!! $projet->description !!}</div>
          <div class="bouton">
            <a href="{{ $projet->site }}" target="_blank" >Voir le site</a>

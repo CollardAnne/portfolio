@@ -12,4 +12,5 @@
    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Raleway&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="{{ asset('css/framework.min.css')}}" />
    <link rel="stylesheet" href="{{ asset('css/style.min.css')}}" />
+
  </head>

@@ -7,35 +7,46 @@
  @extends('templates.app')
  @section('contenu')
 
-   <div id="slider">
-    <ul id="slide-container" class="xs-cache">
+   <div id="slider" class="xs-cache">
+     {{-- <div class="xs-cache"> --}}
+       <ul>
 
-   @foreach ($projets as $projet)
+          @foreach ($projets as $projet)
 
-     <li id="slide{{ $projet->id }}" class="slide grille-g">
-       <!-- image projets -->
-       <figure  class="xs12 m6 pulse imgProjet">
-         <a href="{{ $projet->site }}" target="_blank">
-           <img src="{{asset('storage/'.$projet->image) }}" alt="{{ $projet->nom }}" >
-         </a>
-         <figcaption class="xs-cache">{{ $projet->nom }}</figcaption>
-       </figure>
+            <li class="slide grille-g">
+              <!-- image projets -->
+              <figure  class="xs12 m6 pulse imgProjet">
 
-       <!-- détails projets -->
-       <div id="detailProjet" class="xs12 m6">
-         <h1 class="nomProjet xs-contenu-xl s-contenu-xxl m-contenu-xl l-contenu-xxl" style="color:{{ $projet->couleur }}">{{ $projet->nom }}</h1>
-         <div class="nombreProjet xs-contenu-s">{{ $projet->id }}/{{ $NbrProjets }}</div>
-         <div class="description xs-contenu-xs s-contenu-s m-contenu-xs l-contenu-s">{!! $projet->description !!}</div>
-         <div class="bouton">
-           <a href="{{ $projet->site }}" target="_blank" >Voir le site</a>
-         </div>
-       </div>
-     </li>
+                  <img src="{{asset('storage/'.$projet->image) }}" alt="{{ $projet->nom }}" >
 
-   @endforeach
+                <figcaption class="xs-cache">{{ $projet->nom }}</figcaption>
+              </figure>
 
- </ul>
-</div>
+              <!-- détails projets -->
+              <div id="detailProjet" class="xs12 m6">
+                <h1 class="nomProjet xs-contenu-xl s-contenu-xxl m-contenu-xl l-contenu-xxl" style="color:{{ $projet->couleur }}">{{ $projet->nom }}</h1>
 
+                {{-- <div id="progress">
+                  <div id="bar" style="background-color: {{ $projet->couleur }}"></div>
+                </div> --}}
+                <div class="bar" style="background-color: {{ $projet->couleur }}"></div>
+                <div class="nombreProjet xs-contenu-xs"><span class="contenu-gras">{{sprintf('%02d', $projet->id)}}</span>/{{sprintf('%02d', $NbrProjets)}}</div>
+
+                <div class="description xs-contenu-xs s-contenu-s m-contenu-xs l-contenu-s">{!! $projet->description !!}</div>
+                <div class="detail xs-contenu-s">{!! $projet->detail !!}</div>
+                @if ($projet->lien != $projet->version )
+                  <div class="version xs-contenu-s"><a href="{{ $projet->lien }}" style="color:{{ $projet->couleur }}" target="_blank">{!! $projet->version !!}</a></div>
+                @endif
+                <div class="bouton">
+                  <a href="{{ $projet->site }}" target="_blank">Voir le site</a>
+                </div>
+              </div>
+            </li>
+
+          @endforeach
+
+        </ul>
+     {{-- </div> --}}
+   </div>
 
  @stop

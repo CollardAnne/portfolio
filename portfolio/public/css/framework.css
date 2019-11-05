@@ -308,7 +308,7 @@ figure {
 /*----- BOITES AVEC BORDURE -----*/
 .boite-bords {
   padding: 0.5rem 0;
-  border: #666 1px solid;
+  border: #6abdbd 1px solid;
 }
 
 /*----- BOITES DE COULEURS -----*/
@@ -443,11 +443,11 @@ figure {
 }
 
 .xs-contenu-s {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .xs-contenu-m {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .xs-contenu-l {
@@ -468,10 +468,10 @@ figure {
     font-size: 1rem;
   }
   .s-contenu-s {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .s-contenu-m {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .s-contenu-l {
     font-size: 2.5rem;
@@ -490,10 +490,10 @@ figure {
     font-size: 1rem;
   }
   .m-contenu-s {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .m-contenu-m {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .m-contenu-l {
     font-size: 2.5rem;
@@ -512,10 +512,10 @@ figure {
     font-size: 1rem;
   }
   .l-contenu-s {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .l-contenu-m {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .l-contenu-l {
     font-size: 2.5rem;
@@ -534,10 +534,10 @@ figure {
     font-size: 1rem;
   }
   .xl-contenu-s {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .xl-contenu-m {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .xl-contenu-l {
     font-size: 2.5rem;
@@ -742,13 +742,25 @@ figure {
 /*-- Menu cover --*/
 .menu-cover {
   background: #0B486B;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   display: block;
   z-index: 998;
+}
+
+@media screen and (min-width: 0px) {
+  .menu-cover {
+    position: absolute;
+    height: 200%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-cover {
+    position: fixed;
+    height: 100%;
+  }
 }
 
 .menu-cover ul {
@@ -776,7 +788,7 @@ figure {
   float: right;
   border: 0.5px solid #999999;
   border-radius: 5rem;
-  padding: .5rem 1rem;
+  padding: .5rem 1rem 1rem;
   text-align: center;
   color: #999999;
   z-index: 999;

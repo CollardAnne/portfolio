@@ -36,8 +36,8 @@
 /*----- DIMENSIONS DES CONTENUS -----*/
 
   $taille-xs: 1rem;
-  $taille-s: 1.3rem;
-  $taille-m: 1.7rem;
+  $taille-s: 1.2rem;
+  $taille-m: 1.5rem;
   $taille-l: 2.5rem;
   $taille-xl: 3.5rem;
   $taille-xxl: 4.5rem;
@@ -105,7 +105,7 @@
   $couleurTextBoiteCouleur1: $couleur2Claire;
   $couleurTextBoiteCouleur2: $couleurNeutre;
   $tailleBordsBoite: 1px;
-  $couleurBordsBoite : #666;
+  $couleurBordsBoite : $couleur2Claire;
   $paddingBoiteFlottante: 1.5rem;
 
 
